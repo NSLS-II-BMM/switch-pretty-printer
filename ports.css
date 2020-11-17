@@ -37,7 +37,7 @@ table {
 }
 
 .minor {
-    font-size: 12px;
+    font-size: 13px;
 }
 .major {
     font-size: 26px;
@@ -54,7 +54,13 @@ table {
     color: #777;
 }
 .port {
-    color: #533;
-    font-size: 50px;
+    color: #600;
+    font-size: 45px;
     font-weight: bold;
+}
+.vlan {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #600;
 }

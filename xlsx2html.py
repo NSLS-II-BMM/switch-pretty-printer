@@ -27,7 +27,7 @@ class Ports():
         self.spreadsheet = '06BM port info.xlsx'
         self.switch_data = {}
         self.html = 'test.html'
-        ## port_roles is not right for ID lines
+        ## this should work at any beamline by modding the VLAN number by 10
         #                    0      1      2       3       4    5    6    7    8     9
         self.port_roles = ['SCI', 'CAM', 'INST', 'EPICS', '4', '5', '6', '7', '8', 'MGMT',]
         
@@ -43,9 +43,6 @@ class Ports():
         workbook = load_workbook(spreadsheet, read_only=True);
         worksheet = workbook.active
         for row in worksheet.rows:
-            #            if row[1].value.split('/')[1] == 'Port':
-            #                continue
-            
             try:
                 if row[1].value.split('/')[1] != '1': # skip Ports like 1/3/1 and such
                     continue
@@ -131,7 +128,17 @@ class Ports():
         mac = mac.replace('.','').replace(':','')
         return '.'.join(mac[i:i+4] for i in range(0,12,4)).lower()
         #return ':'.join(mac[i:i+2] for i in range(0,12,2)).lower()
-        
+
+    def boxify(self, word):
+        '''Convert a word to be spelled by unicode points in the Enclosed
+        Alphanumeric Supplement section.  "Negative Squared Latin Capital Letter X"
+        See https://unicode-table.com/en/#1F173'''
+        boxedword = ''
+        for letter in word:
+            character = f'&#{127247+ord(letter)};'
+            boxedword = boxedword + character
+        return(boxedword)
+    
     def oneport(self, this):
         '''Generate a table that will will one div of the output html file.
         This table contains the data from a single port.  The div looks
@@ -153,7 +160,7 @@ class Ports():
             <tr>
               <td rowspan= 4><span class="port">{portn}</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="minor">{vlan} {role}</span></td>
+              <td><span class="vlan">{vlan} {role}</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -187,14 +194,19 @@ class Ports():
         else:
             n = this['VLAN'] % 10
             role = f' / {self.port_roles[n]}'
+
         this_ip = this['IP address']
         if this['IP address'].lower() == 'no ip':
-            this_ip = ' ' #'0.0.0.0'
+            #this_ip = '&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;' # a schmancy way of saying "unused"
+            this_ip = self.boxify('unused')
+
         this_name = this['Name']
         if this['Name'] is None or this['Name'].lower() == 'none':
             this_name = ' '
+
         if this['notes'] is None:
             this['notes'] = ''
+
         mac_address = self.regularize_mac_address(this['MAC address'])
         try:
             vendor = maclookup.lookup(mac_address)
