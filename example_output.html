@@ -1,0 +1,4285 @@
+
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="ports.css" /> -->
+    <style>
+      body {
+	  margin: 40px;
+      }
+
+      .box {
+	  background-color: #8a8;
+	  color: #fff;
+	  border-radius: 5px;
+	  padding: 20px;
+	  font-size: 150%;
+	  width: 210px;
+      }
+
+      .box:nth-child(even) {
+	  background-color: #cca;
+	  color: #000;
+      }
+
+      .wrapper {
+	  width: 100%;
+	  display: grid;
+	  grid-gap: 10px;
+	  grid-template-columns: repeat(6, 250px);
+      }
+
+      h1 {
+	  font-size: 80px;
+	  text-align: center;
+      }
+
+      table {
+	  width: 190px
+      }
+
+      .minor {
+	  font-size: 11px;
+      }
+      .major {
+	  font-size: 24px;
+      }
+      .name {
+	  font-size: 16px;
+      }
+      .port {
+	  color: #533;
+	  font-size: 50px;
+	  font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <h1>net-06bm-agg</h1>
+      <div class="wrapper">
+        <div class="box box1">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">1</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.25</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">9457.a55b.cb38</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box box2">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">1</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.25</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc1-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">9457.a55b.cb38</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">2</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.25</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc1-651</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">9457.a55b.cb39</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">3</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">659 (MGMT)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.71.6.153</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc1-rsc</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">9457.a55f.e586</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">4</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.25</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc1-652</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">9457.a55b.cb3a</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">5</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.29</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-pilatus100k</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">f8db.88fb.fef2</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">6</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.29</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-pilatus100k-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">f8db.88fb.fef1</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">6</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">f8db.88fb.fef3</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">7</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.45</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-cam5</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">accc.8e88.7503</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">8</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.46</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-cam6</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">accc.8e87.c5a3</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">9</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.26</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc2</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">9457.a55b.090c</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">9</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.26</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc2-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">9457.a55b.090c</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">10</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.26</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc2-651</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">11</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.26</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc2-652</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">12</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">659 (MGMT)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.71.6.154</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc2-rsc</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">9457.a560.2ccc</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">13</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.30</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mythen</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">14</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.101</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2cb.cd29</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">15</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.251</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ca1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">30e1.7155.3558</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">15</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.251</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ca1-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">30e1.7155.3558</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">16</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">659 (MGMT)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.71.6.155</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ca1-rsc</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">30e1.7159.f146</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">17</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.47</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-cam7</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">18</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.44</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-cam4</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">19</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.43</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-cam3</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">000f.3102.e9ba</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">20</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.106</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc6</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2c0.07b3</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">21</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.107</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc7</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2c0.2046</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">22</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.108</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc8</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2cc.1734</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">23</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.109</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc9</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">24</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.110</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc10</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">25</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.111</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc11</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2c0.203f</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">26</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.112</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc12</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2cb.b9a3</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">27</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.113</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc13</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2c0.2be6</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">28</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.114</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc14</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">29</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.75</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-tsrv5</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0090.e85c.07e7</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">30</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.76</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-tsrv6</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0090.e858.88de</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">31</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.225</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws5</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0025.90eb.8aae</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">31</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.225</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws5-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0025.90eb.8aae</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">31</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0025.90ec.f756</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">32</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.61</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-nas1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0011.32a8.24fa</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">33</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.143</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-biologic</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">00:14:d8:01:27:ed</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">34</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.77</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-tsrv7</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">00:90:e8:7e:34:2a</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">35</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.194</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-em1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">001e.c0ee.fc61</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">36</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.195</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-em2</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">001e.c0ee.fc57</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">37</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.185</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-em3</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0200.c359.4b0d</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">38</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.61</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-plc1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">e490.699e.243d</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">39</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.224</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws4</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">40b0.343e.d740</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">39</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.224</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws4-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">40b0.343e.d740</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">40</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.191</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-lpr1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">c465.16de.63dd</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">41</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">laptop</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">42</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">10M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.226</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws6</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">42</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">10M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.226</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws6-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">43</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.223</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws3</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">001e.c968.a205</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">43</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.222</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws3-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">001e.c968.a205</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">44</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">45</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.41</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-vme1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">ec9e.cd1c.8db3</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">46</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.221</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0cc4.7acc.4b1a</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">46</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.221</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ws1-653</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0cc4.7acc.4b1a</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">46</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">Yes</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0cc4.7acc.46cb</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">1</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">1 </span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">2</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">1 </span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">3</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">1 </span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">4</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">1 </span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">1</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">1 </span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    <h1>net-06bm-foe</h1>
+      <div class="wrapper">
+        <div class="box box1">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">3</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box box2">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">4</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">5</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">6</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">7</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">8</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">9</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.41</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-cam1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">000f.3102.ec65</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">10</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.41.42</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-cam2</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">000f.3102.e9b9</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">11</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">12</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">13</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">14</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.102</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc2</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c27a.afea</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">15</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.103</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc3</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2c0.04c4</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">16</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.104</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc4</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2c0.0495</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">17</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.105</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-mc5</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0050.c2c0.07b5</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">18</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.141</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-enpb1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">19</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">20</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">21</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">22</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">23</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">24</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">25</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">26</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">27</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">28</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">29</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.71</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-tsrv1</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0090.e85c.07f4</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">30</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.72</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-tsrv2</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0090.e85a.56d2</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">31</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.73</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-tsrv3</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0090.e855.37b8</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">32</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">100M</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.42.74</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-tsrv4</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0090.e855.37b2</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">33</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">34</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">35</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">36</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">37</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">38</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">39</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">40</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">41</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">42</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">43</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">44</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">45</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">46</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">47</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">48</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    <h1>net-06bm-a</h1>
+      <div class="wrapper">
+        <div class="box box1">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">1</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box box2">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">2</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">3</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">4</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">5</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">653 (EPICS)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">6</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.43.31</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-ioc-xspress3</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">2cea.7fd9.c0e8</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">7</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">8</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">9</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">10</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">11</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">12</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">1G</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">10.68.40.62</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">xf06bm-nas2</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">0011.32a0.d195 </span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">13</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">14</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">15</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">16</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">17</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">18</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">19</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">20</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">650 (SCI)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">21</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">22</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">23</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">24</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">25</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">26</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">27</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">28</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">651 (CAM)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">29</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">30</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">31</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">32</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">33</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">34</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">35</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">36</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">37</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">38</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">39</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">40</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">41</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">42</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">43</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">44</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">45</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">46</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">47</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td rowspan= 4><span class="port">48</span></td>
+              <td><span class="minor">VLAN:</span></td>
+              <td><span class="minor">652 (INST)</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Tag:</span></td>
+              <td><span class="minor">No</span></td>
+            </tr>
+            <tr>
+              <td><span class="minor">Speed:</span></td>
+              <td><span class="minor">None</span></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+              <td colspan=3 align=center><span class="major">no ip</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">None</span></td>
+            </tr>
+            <tr>
+              <td colspan=3 align=center><span class="name">no mac</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+  </body>
+</html>
+
