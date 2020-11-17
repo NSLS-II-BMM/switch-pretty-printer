@@ -18,5 +18,5 @@ Here's a picture of an example:
 
 Here's a link to an example:
 
-![example](./example_output.html)
+<./example_output.html>
 
