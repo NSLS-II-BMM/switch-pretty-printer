@@ -3,16 +3,16 @@ body {
 }
 
 .box {
-    background-color: #999;
+    background-color: #8a8;
     color: #fff;
     border-radius: 5px;
     padding: 20px;
     font-size: 150%;
-    width: 180px;
+    width: 210px;
 }
 
 .box:nth-child(even) {
-    background-color: #ccc;
+    background-color: #cca;
     color: #000;
 }
 
@@ -20,7 +20,7 @@ body {
     width: 100%;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(7, 220px);
+    grid-template-columns: repeat(6, 250px);
 }
 
 h1 {
@@ -28,15 +28,21 @@ h1 {
     text-align: center;
 }
 
+table {
+    width: 190px
+}
+
 .minor {
     font-size: 11px;
 }
 .major {
-    font-size: 20px;
+    font-size: 24px;
 }
 .name {
     font-size: 16px;
 }
 .port {
-    font-size: 60px;
+    color: #533;
+    font-size: 50px;
+    font-weight: bold;
 }
