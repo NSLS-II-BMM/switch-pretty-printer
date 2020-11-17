@@ -16,7 +16,5 @@ Here's a picture of an example:
 
 ![example output](./example.png)
 
-Here's a link to an example:
-
-<./example_output.html>
+[Here's a link to an example](./example_output.html)
 
