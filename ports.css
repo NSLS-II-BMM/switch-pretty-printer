@@ -27,19 +27,31 @@ h1 {
     font-size: 80px;
     text-align: center;
 }
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
 
 table {
     width: 190px
 }
 
 .minor {
-    font-size: 11px;
+    font-size: 12px;
 }
 .major {
-    font-size: 24px;
+    font-size: 26px;
 }
 .name {
-    font-size: 16px;
+    font-size: 18px;
+}
+.mac {
+    font-size: 18px;
+    font-family: monospace;
+}
+.notes {
+    font-size: 10px;
+    color: #777;
 }
 .port {
     color: #533;

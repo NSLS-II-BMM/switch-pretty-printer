@@ -12,6 +12,11 @@ m.make_html()         # write data to an html file
 ```
 
 
-Here's an example:
+Here's a picture of an example:
 
 ![example output](./example.png)
+
+Here's a link to an example:
+
+![example](./example_output.html)
+
