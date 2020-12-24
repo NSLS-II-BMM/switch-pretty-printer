@@ -27,6 +27,8 @@ class Ports():
         self.spreadsheet = '06BM port info.xlsx'
         self.switch_data = {}
         self.html = 'test.html'
+        self.singlepage = False
+        self.cssfile = 'ports.css'
         ## this should work at any beamline by modding the VLAN number by 10
         #                    0      1      2       3       4    5    6    7    8     9
         self.port_roles = ['SCI', 'CAM', 'INST', 'EPICS', '4', '5', '6', '7', '8', 'MGMT',]
@@ -80,10 +82,22 @@ class Ports():
         ##########
         # header #
         ##########
-        page = '''
+        if self.singlepage is True:
+            with open(self.cssfile) as x: css = x.read()
+            page = f'''
 <html>
   <head>
-    <link rel="stylesheet" href="ports.css" />
+    <style>
+{css}
+    </style>
+  </head>
+
+  <body>'''
+        else:
+            page = f'''
+<html>
+  <head>
+    <link rel="stylesheet" href="{self.cssfile}" />
   </head>
 
   <body>'''
@@ -234,7 +248,8 @@ class Ports():
 def main():
     m=Ports()
     m.spreadsheet = '06BM port info.xlsx'
-    m.html = 'test.html'
+    m.html        = 'test.html'
+    m.singlepage  = False
     m.read_spreadsheet()
     m.make_html()
 
