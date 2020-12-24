@@ -248,8 +248,8 @@ class Ports():
 def main():
     m=Ports()
     m.spreadsheet = '06BM port info.xlsx'
-    m.html        = 'test.html'
-    m.singlepage  = False
+    m.html        = 'example_output.html'
+    m.singlepage  = True
     m.read_spreadsheet()
     m.make_html()
 
