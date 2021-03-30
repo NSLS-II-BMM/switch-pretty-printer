@@ -24,7 +24,7 @@ class Ports():
 
     '''
     def __init__(self):
-        self.spreadsheet = '06BM port info.xlsx'
+        self.spreadsheet = 'current.xlsx'
         self.switch_data = {}
         self.html = 'test.html'
         self.singlepage = False
@@ -45,10 +45,17 @@ class Ports():
         workbook = load_workbook(spreadsheet, read_only=True);
         worksheet = workbook.active
         for row in worksheet.rows:
+            if row[0].value is None:
+                continue
+            if row[0].value == 'Switch':
+                continue
             try:
-                if row[1].value.split('/')[1] != '1': # skip Ports like 1/3/1 and such
-                    continue
-                pnum = row[1].value.split('/')[2]
+                if '/' in row[1].value:
+                    if row[1].value.split('/')[1] != '1': # skip Ports like 1/3/1 and such
+                        continue
+                    pnum = row[1].value.split('/')[2]
+                else:
+                    pnum = row[1].value
                 this = {'Port number' : pnum,
                         'Link'        : row[2].value,
                         'Duplex'      : row[3].value,
@@ -70,7 +77,7 @@ class Ports():
     def to_json(self, filename='ports.json'):
         '''Save spreadsheet data to a JSON file''' 
         with open(filename, 'w') as fp:
-            json.dump(self.switch_data, fp)
+            json.dump(self.switch_data, fp, indent=4)
 
         
     def make_html(self):
@@ -247,10 +254,11 @@ class Ports():
 
 def main():
     m=Ports()
-    m.spreadsheet = '06BM port info.xlsx'
+    m.spreadsheet = 'current.xlsx'
     m.html        = 'example_output.html'
     m.singlepage  = True
     m.read_spreadsheet()
+    m.to_json()
     m.make_html()
 
 if __name__ == "__main__":
