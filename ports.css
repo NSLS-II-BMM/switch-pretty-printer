@@ -49,9 +49,17 @@ table {
     font-size: 18px;
     font-family: monospace;
 }
+.vendor {
+    font-size: 13px;
+    color: #555;
+}
 .notes {
-    font-size: 10px;
-    color: #777;
+    font-size: 13px;
+    color: #006;
+}
+.patchpanel {
+    font-size: 13px;
+    color: #006;
 }
 .port {
     color: #600;

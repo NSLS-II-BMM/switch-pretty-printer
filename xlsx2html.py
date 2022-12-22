@@ -25,14 +25,41 @@ class Ports():
     '''
     def __init__(self):
         self.spreadsheet = 'current.xlsx'
+        self.patchpanel = 'PatchPanel.xlsx'
         self.switch_data = {}
+        self.patch_data = {}
         self.html = 'test.html'
         self.singlepage = False
         self.cssfile = 'ports.css'
         ## this should work at any beamline by modding the VLAN number by 10
         #                    0      1      2       3       4    5    6    7    8     9
         self.port_roles = ['SCI', 'CAM', 'INST', 'EPICS', '4', '5', '6', '7', '8', 'MGMT',]
-        
+
+
+    def read_patchpanel(self, spreadsheet=None):
+        if spreadsheet is None:
+            spreadsheet = self.patchpanel
+        if spreadsheet is None:
+            print('You need to specify the path to the patch panel spreadsheet')
+            return()
+        print(f'Reading path panel data from {spreadsheet}')
+        workbook = load_workbook(spreadsheet, read_only=True);
+        worksheet = workbook.active
+        for row in worksheet.rows:
+            if row[0].value is None:
+                continue
+            if 'Cable' in str(row[0].value):
+                continue
+            this = {'Cable number' : row[0].value,
+                    'Patch panel number' : row[1].value,
+                    'Patch panel label'  : row[2].value,
+                    'Switch'             : row[3].value,
+                    'Port number'        : row[4].value,
+                    'dangling'           : row[5].value,
+                    }
+            if this["Switch"] is not None:
+                key = f'net-06bm-{this["Switch"]}:{this["Port number"]}'
+                self.patch_data[key] = this
 
     def read_spreadsheet(self, spreadsheet=None):
         '''Read spreadsheet data, storing its contents in a dict '''
@@ -56,6 +83,7 @@ class Ports():
                     pnum = row[1].value.split('/')[2]
                 else:
                     pnum = row[1].value
+
                 this = {'Port number' : pnum,
                         'Link'        : row[2].value,
                         'Duplex'      : row[3].value,
@@ -117,13 +145,13 @@ class Ports():
             ## generate a div for the table explaining each port
             for i,this in enumerate(self.switch_data[sw]):
                 if i == 0:
-                    text = '        <div class="box box1">' + self.oneport(this) + '        </div>\n'
+                    text = '        <div class="box box1">' + self.oneport(this,sw) + '        </div>\n'
                     #print(text, '\n')
                 elif i == 1:
-                    text = '        <div class="box box2">' + self.oneport(this) + '        </div>\n'
+                    text = '        <div class="box box2">' + self.oneport(this,sw) + '        </div>\n'
                     #print(text, '\n')
                 else:
-                    text = '        <div class="box">' + self.oneport(this) + '        </div>\n'
+                    text = '        <div class="box">' + self.oneport(this,sw) + '        </div>\n'
                     #print(text, '\n')
                 page = page + text
             ## close the wrapper div
@@ -160,7 +188,7 @@ class Ports():
             boxedword = boxedword + character
         return(boxedword)
     
-    def oneport(self, this):
+    def oneport(self, this, sw):
         '''Generate a table that will will one div of the output html file.
         This table contains the data from a single port.  The div looks
         something like this:
@@ -173,6 +201,7 @@ class Ports():
         | IP address on this port  |
         |  DNS name on this port   |
         | MAC address on this port |
+        |  patch panel connected   | 
         +--------------------------+
 
         '''
@@ -207,6 +236,9 @@ class Ports():
             <tr>
               <td colspan=3 align=center><span class="notes">{notes}</span></td>
             </tr>
+            <tr>
+              <td colspan=3 align=center><span class="patchpanel">{patchpanel}</span></td>
+            </tr>
           </table>
 '''
 
@@ -233,6 +265,11 @@ class Ports():
             vendor = maclookup.lookup(mac_address)
         except:
             vendor = ''
+
+        patchpanel = ''
+        key = f'{sw}:{this["Port number"]}'
+        if key in self.patch_data:
+            patchpanel = f'patch {self.patch_data[key]["Patch panel number"]} ({self.patch_data[key]["Patch panel label"]})'
             
         return(form.format(duplex = this['Duplex'],
                            speed  = this['Speed'],
@@ -245,6 +282,7 @@ class Ports():
                            mac    = mac_address,
                            vendor = vendor,
                            notes  = this['notes'],
+                           patchpanel = patchpanel,
         ))
         
 
@@ -255,8 +293,10 @@ class Ports():
 def main():
     m=Ports()
     m.spreadsheet = 'current.xlsx'
+    m.patchpanel  = 'PatchPanel.xlsx'
     m.html        = 'example_output.html'
     m.singlepage  = True
+    m.read_patchpanel()
     m.read_spreadsheet()
     m.to_json()
     m.make_html()
