@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html>
   <head>
     <style>
@@ -8,11 +9,11 @@ body {
 
 .box {
     background-color: #8a8;
-    color: #fff;
+    color: #000;
     border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
-    width: 210px;
+    padding: 10px;
+    font-size: 100%;
+    width: 230px;
 }
 
 .box:nth-child(even) {
@@ -56,14 +57,18 @@ table {
 .vendor {
     font-size: 13px;
     color: #555;
+    line-height: 1.0;
+    display: block;
 }
 .notes {
     font-size: 13px;
-    color: #006;
+    color: #600;
+    line-height: 1.0;
+    display: block;
 }
 .patchpanel {
     font-size: 13px;
-    color: #006;
+    color: #600;
 }
 .port {
     color: #600;
@@ -76,21 +81,65 @@ table {
     font-family: sans-serif;
     color: #600;
 }
+.file {
+    font-family: monospace;
+}
+.container {
+    border: 4px solid #8a8;
+    border-radius: 15px;
+    position: relative;
+    font-size: 20px;
+}
+
+.insetlabel {
+    font-size: 40px;
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    height: 50px;
+    width: 600px;
+    background-color: #cca;
+    border: 4px solid #8a8;
+    border-radius: 15px;
+    text-align: center;
+}
 
     </style>
   </head>
-
   <body>
+    <fieldset class="container">
+      <legend class="insetlabel">BMM Switch Map</legend>
+      <p> 
+        &nbsp;
+      </p>
+      <ul>
+        <li><a href="https://github.com/NSLS-II-BMM/switch-pretty-printer">Go to Github repository</a></li>
+        <li>Patch panel cables in RGC3 are numbered to match the patch numbering.</li>  
+        <li>Cables should be moved on the switch, not on the patch panel.</li>
+        <li>Cable numbers in RGC3 count from 1 to 48.</li>
+        <li>Cable numbers in RGA1 count from 49 to 70.</li>
+        <li>Capture cable changes in the <span class=file>current.xlsx</span> and <span class=file>PatchPanel.xlsx</span> files.</li>
+        <li>Writing date: December 23, 2022</li>
+      </ul>
+    </fieldset>
 
-    <h1>net-06bm-agg</h1>
-    <h2>December 22, 2022</h2>
-      <div class="wrapper">
+    <p>
+      &nbsp;
+    </p>
+
+    <fieldset class="container">
+       <legend class="insetlabel">net-06bm-agg</legend>
+         <p>
+           &nbsp;
+         </p>
+
+         <div class="wrapper">
         <div class="box box1">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">1</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">1</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -100,7 +149,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.25</span></td>
             </tr>
@@ -124,9 +172,9 @@ table {
         <div class="box box2">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">1</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">1</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -136,7 +184,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.25</span></td>
             </tr>
@@ -160,9 +207,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">2</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">2</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -172,7 +219,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.41.25</span></td>
             </tr>
@@ -196,9 +242,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">3</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">3</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">659  / MGMT</span></td>
+              <td><span class="vlan">659/MGMT</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -208,7 +254,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.71.6.153</span></td>
             </tr>
@@ -232,9 +277,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">4</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">4</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -244,7 +289,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.25</span></td>
             </tr>
@@ -268,9 +312,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">5</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">5</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -280,7 +324,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.29</span></td>
             </tr>
@@ -304,9 +347,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">6</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">6</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -316,7 +359,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.29</span></td>
             </tr>
@@ -340,9 +382,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">7</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">7</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -352,7 +394,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.41.45</span></td>
             </tr>
@@ -376,9 +417,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">8</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">8</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -388,7 +429,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.41.46</span></td>
             </tr>
@@ -412,9 +452,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">9</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">9</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -424,7 +464,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.26</span></td>
             </tr>
@@ -448,9 +487,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">9</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">9</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -460,7 +499,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.26</span></td>
             </tr>
@@ -484,9 +522,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">10</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">10</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -496,7 +534,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -520,9 +557,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">11</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">11</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -532,7 +569,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -556,9 +592,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">12</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">12</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">659  / MGMT</span></td>
+              <td><span class="vlan">659/MGMT</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -568,7 +604,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.71.6.154</span></td>
             </tr>
@@ -592,9 +627,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">13</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">13</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -604,7 +639,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -628,9 +662,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">14</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">14</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -640,7 +674,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.101</span></td>
             </tr>
@@ -664,9 +697,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">15</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">15</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -676,7 +709,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.251</span></td>
             </tr>
@@ -700,9 +732,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">15</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">15</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -712,7 +744,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.251</span></td>
             </tr>
@@ -736,9 +767,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">16</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">16</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">659  / MGMT</span></td>
+              <td><span class="vlan">659/MGMT</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -748,7 +779,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.71.6.155</span></td>
             </tr>
@@ -772,9 +802,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">17</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">17</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -784,7 +814,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -808,9 +837,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">18</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">18</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -820,7 +849,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -844,9 +872,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">19</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">19</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -856,7 +884,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.41.43</span></td>
             </tr>
@@ -880,9 +907,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">20</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">20</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -892,7 +919,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.106</span></td>
             </tr>
@@ -916,9 +942,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">21</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">21</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -928,7 +954,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.107</span></td>
             </tr>
@@ -952,9 +977,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">22</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">22</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -964,7 +989,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.108</span></td>
             </tr>
@@ -988,9 +1012,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">23</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">23</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1000,7 +1024,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -1024,9 +1047,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">24</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">24</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1036,7 +1059,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -1060,9 +1082,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">25</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">25</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1072,7 +1094,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.111</span></td>
             </tr>
@@ -1096,9 +1117,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">26</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">26</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1108,7 +1129,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.112</span></td>
             </tr>
@@ -1132,9 +1152,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">27</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">27</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1144,7 +1164,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.113</span></td>
             </tr>
@@ -1168,9 +1187,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">28</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">28</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1180,7 +1199,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.114</span></td>
             </tr>
@@ -1204,9 +1222,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">29</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">29</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1216,7 +1234,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.75</span></td>
             </tr>
@@ -1240,9 +1257,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">30</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">30</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1252,7 +1269,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.76</span></td>
             </tr>
@@ -1276,9 +1292,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">31</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">31</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1288,7 +1304,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.225</span></td>
             </tr>
@@ -1312,9 +1327,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">31</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">31</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1324,7 +1339,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.225</span></td>
             </tr>
@@ -1348,9 +1362,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">32</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">32</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1360,7 +1374,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.61</span></td>
             </tr>
@@ -1384,9 +1397,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">33</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">33</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1396,7 +1409,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -1420,9 +1432,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">34</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">34</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1432,7 +1444,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.77</span></td>
             </tr>
@@ -1456,9 +1467,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">35</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">35</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1468,7 +1479,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.194</span></td>
             </tr>
@@ -1492,9 +1502,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">36</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">36</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1504,7 +1514,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.195</span></td>
             </tr>
@@ -1528,9 +1537,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">37</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">37</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1540,7 +1549,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.185</span></td>
             </tr>
@@ -1564,9 +1572,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">38</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">38</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1576,7 +1584,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.61</span></td>
             </tr>
@@ -1600,9 +1607,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">39</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">39</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1612,7 +1619,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.224</span></td>
             </tr>
@@ -1636,9 +1642,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">39</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">39</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1648,7 +1654,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.224</span></td>
             </tr>
@@ -1672,9 +1677,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">40</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">40</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1684,7 +1689,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -1708,9 +1712,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">41</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">41</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1720,7 +1724,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -1744,9 +1747,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">42</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">42</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1756,7 +1759,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.226</span></td>
             </tr>
@@ -1780,9 +1782,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">42</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">42</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1792,7 +1794,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.226</span></td>
             </tr>
@@ -1816,9 +1817,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">43</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">43</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1828,7 +1829,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.222</span></td>
             </tr>
@@ -1852,9 +1852,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">43</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">43</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1864,7 +1864,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.222</span></td>
             </tr>
@@ -1888,9 +1887,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">44</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">44</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1900,7 +1899,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -1924,9 +1922,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">45</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">45</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1936,7 +1934,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.41</span></td>
             </tr>
@@ -1960,9 +1957,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">46</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">46</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -1972,7 +1969,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.221</span></td>
             </tr>
@@ -1996,9 +1992,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">46</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">46</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2008,7 +2004,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.43.221</span></td>
             </tr>
@@ -2030,16 +2025,25 @@ table {
           </table>
         </div>
       </div>
+    </fieldset>
 
-    <h1>net-06bm-foe</h1>
-    <h2>December 22, 2022</h2>
-      <div class="wrapper">
+    <p>
+      &nbsp;
+    </p>
+
+    <fieldset class="container">
+       <legend class="insetlabel">net-06bm-foe</legend>
+         <p>
+           &nbsp;
+         </p>
+
+         <div class="wrapper">
         <div class="box box1">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">3</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">3</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2049,7 +2053,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2073,9 +2076,9 @@ table {
         <div class="box box2">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">4</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">4</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2085,7 +2088,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2109,9 +2111,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">5</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">5</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2121,7 +2123,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2145,9 +2146,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">6</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">6</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2157,7 +2158,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2181,9 +2181,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">7</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">7</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2193,7 +2193,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2217,9 +2216,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">8</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">8</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2229,7 +2228,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2253,9 +2251,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">9</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">9</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2265,7 +2263,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.41.41</span></td>
             </tr>
@@ -2289,9 +2286,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">10</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">10</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2301,7 +2298,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.41.42</span></td>
             </tr>
@@ -2325,9 +2321,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">11</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">11</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2337,7 +2333,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2361,9 +2356,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">12</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">12</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2373,7 +2368,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2397,9 +2391,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">13</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">13</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2409,7 +2403,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2433,9 +2426,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">14</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">14</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2445,7 +2438,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.102</span></td>
             </tr>
@@ -2469,9 +2461,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">15</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">15</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2481,7 +2473,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.103</span></td>
             </tr>
@@ -2505,9 +2496,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">16</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">16</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2517,7 +2508,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.104</span></td>
             </tr>
@@ -2541,9 +2531,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">17</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">17</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2553,7 +2543,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.105</span></td>
             </tr>
@@ -2577,9 +2566,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">18</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">18</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2589,7 +2578,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2613,9 +2601,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">19</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">19</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2625,7 +2613,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.78</span></td>
             </tr>
@@ -2649,9 +2636,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">20</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">20</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2661,7 +2648,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2685,9 +2671,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">21</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">21</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2697,7 +2683,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2721,9 +2706,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">22</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">22</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2733,7 +2718,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2757,9 +2741,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">23</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">23</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2769,7 +2753,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2793,9 +2776,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">24</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">24</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2805,7 +2788,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2829,9 +2811,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">25</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">25</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2841,7 +2823,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2865,9 +2846,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">26</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">26</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2877,7 +2858,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2901,9 +2881,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">27</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">27</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2913,7 +2893,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2937,9 +2916,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">28</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">28</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2949,7 +2928,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -2973,9 +2951,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">29</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">29</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -2985,7 +2963,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.71</span></td>
             </tr>
@@ -3009,9 +2986,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">30</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">30</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3021,7 +2998,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.72</span></td>
             </tr>
@@ -3045,9 +3021,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">31</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">31</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3057,7 +3033,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.73</span></td>
             </tr>
@@ -3081,9 +3056,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">32</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">32</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3093,7 +3068,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">100M</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.74</span></td>
             </tr>
@@ -3117,9 +3091,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">33</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">33</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3129,7 +3103,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3153,9 +3126,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">34</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">34</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3165,7 +3138,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3189,9 +3161,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">35</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">35</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3201,7 +3173,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3225,9 +3196,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">36</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">36</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3237,7 +3208,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3261,9 +3231,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">37</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">37</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3273,7 +3243,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3297,9 +3266,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">38</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">38</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3309,7 +3278,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3333,9 +3301,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">39</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">39</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3345,7 +3313,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3369,9 +3336,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">40</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">40</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3381,7 +3348,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3405,9 +3371,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">41</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">41</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3417,7 +3383,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3441,9 +3406,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">42</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">42</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3453,7 +3418,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3477,9 +3441,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">43</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">43</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3489,7 +3453,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3513,9 +3476,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">44</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">44</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3525,7 +3488,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3549,9 +3511,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">45</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">45</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3561,7 +3523,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3585,9 +3546,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">46</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">46</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3597,7 +3558,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3621,9 +3581,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">47</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">47</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3633,7 +3593,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3657,9 +3616,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">48</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">48</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3669,7 +3628,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3691,16 +3649,25 @@ table {
           </table>
         </div>
       </div>
+    </fieldset>
 
-    <h1>net-06bm-a</h1>
-    <h2>December 22, 2022</h2>
-      <div class="wrapper">
+    <p>
+      &nbsp;
+    </p>
+
+    <fieldset class="container">
+       <legend class="insetlabel">net-06bm-a</legend>
+         <p>
+           &nbsp;
+         </p>
+
+         <div class="wrapper">
         <div class="box box1">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">1</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">1</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3710,7 +3677,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3734,9 +3700,9 @@ table {
         <div class="box box2">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">2</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">2</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3746,7 +3712,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3770,9 +3735,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">3</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">3</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3782,7 +3747,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3806,9 +3770,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">4</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">4</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3818,7 +3782,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3842,9 +3805,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">5</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">5</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3854,7 +3817,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.31</span></td>
             </tr>
@@ -3878,9 +3840,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">6</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">6</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3890,7 +3852,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3914,9 +3875,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">7</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">7</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3926,7 +3887,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3950,9 +3910,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">8</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">8</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3962,7 +3922,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -3986,9 +3945,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">9</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">9</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -3998,7 +3957,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4022,9 +3980,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">10</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">10</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4034,7 +3992,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4058,9 +4015,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">11</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">11</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4070,7 +4027,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4094,9 +4050,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">12</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">12</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4106,7 +4062,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.62</span></td>
             </tr>
@@ -4130,9 +4085,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">13</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">13</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4142,7 +4097,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.40.191</span></td>
             </tr>
@@ -4166,9 +4120,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">14</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">14</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4178,7 +4132,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4202,9 +4155,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">15</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">15</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4214,7 +4167,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4238,9 +4190,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">16</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">16</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4250,7 +4202,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4274,9 +4225,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">17</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">17</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4286,7 +4237,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4310,9 +4260,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">18</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">18</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4322,7 +4272,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4346,9 +4295,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">19</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">19</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">650  / SCI</span></td>
+              <td><span class="vlan">650/SCI</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4358,7 +4307,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4382,9 +4330,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">20</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">20</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4394,7 +4342,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4418,9 +4365,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">21</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">21</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4430,7 +4377,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4454,9 +4400,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">22</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">22</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4466,7 +4412,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4490,9 +4435,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">23</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">23</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4502,7 +4447,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4526,9 +4470,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">24</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">24</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4538,7 +4482,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4562,9 +4505,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">25</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">25</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4574,7 +4517,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4598,9 +4540,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">26</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">26</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4610,7 +4552,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4634,9 +4575,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">27</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">27</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4646,7 +4587,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4670,9 +4610,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">28</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">28</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">651  / CAM</span></td>
+              <td><span class="vlan">651/CAM</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4682,7 +4622,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4706,9 +4645,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">29</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">29</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4718,7 +4657,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4742,9 +4680,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">30</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">30</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4754,7 +4692,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4778,9 +4715,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">31</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">31</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4790,7 +4727,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">1G</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.62</span></td>
             </tr>
@@ -4814,9 +4750,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">32</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">32</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4826,7 +4762,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.78</span></td>
             </tr>
@@ -4850,9 +4785,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">33</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">33</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4862,7 +4797,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.79</span></td>
             </tr>
@@ -4886,9 +4820,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">34</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">34</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4898,7 +4832,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.80</span></td>
             </tr>
@@ -4922,9 +4855,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">35</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">35</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4934,7 +4867,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">10.68.42.81</span></td>
             </tr>
@@ -4958,9 +4890,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">36</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">36</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -4970,7 +4902,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -4994,9 +4925,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">37</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">37</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5006,7 +4937,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -5030,9 +4960,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">38</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">38</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5042,7 +4972,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -5066,9 +4995,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">39</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">39</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5078,7 +5007,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -5102,9 +5030,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">40</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">40</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5114,7 +5042,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -5138,9 +5065,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">41</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">41</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5150,7 +5077,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -5174,9 +5100,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">42</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">42</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">652  / INST</span></td>
+              <td><span class="vlan">652/INST</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5186,7 +5112,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -5210,9 +5135,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">43</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">43</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5222,7 +5147,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">DHCP port</span></td>
             </tr>
@@ -5246,9 +5170,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">44</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">44</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5258,7 +5182,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">DHCP port</span></td>
             </tr>
@@ -5282,9 +5205,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">45</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">45</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5294,7 +5217,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">DHCP port</span></td>
             </tr>
@@ -5318,9 +5240,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">46</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">46</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5330,7 +5252,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">DHCP port</span></td>
             </tr>
@@ -5354,9 +5275,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">47</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">47</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5366,7 +5287,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -5390,9 +5310,9 @@ table {
         <div class="box">
           <table>
             <tr>
-              <td rowspan= 4><span class="port">48</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">48</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">653  / EPICS</span></td>
+              <td><span class="vlan">653/EPICS</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -5402,7 +5322,6 @@ table {
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">None</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">&#127364;&#127357;&#127364;&#127362;&#127348;&#127347;</span></td>
             </tr>
@@ -5424,6 +5343,7 @@ table {
           </table>
         </div>
       </div>
+    </fieldset>
   </body>
 </html>
 

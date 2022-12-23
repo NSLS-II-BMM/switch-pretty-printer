@@ -120,27 +120,57 @@ class Ports():
         if self.singlepage is True:
             with open(self.cssfile) as x: css = x.read()
             page = f'''
+<!DOCTYPE html>
 <html>
   <head>
     <style>
 {css}
     </style>
   </head>
-
-  <body>'''
+'''
         else:
             page = f'''
 <html>
   <head>
     <link rel="stylesheet" href="{self.cssfile}" />
   </head>
+'''
 
-  <body>'''
+
+        page += f'''  <body>
+    <fieldset class="container">
+      <legend class="insetlabel">BMM Switch Map</legend>
+      <p> 
+        &nbsp;
+      </p>
+      <ul>
+        <li><a href="https://github.com/NSLS-II-BMM/switch-pretty-printer">Go to Github repository</a></li>
+        <li>Patch panel cables in RGC3 are numbered to match the patch numbering.</li>  
+        <li>Cables should be moved on the switch, not on the patch panel.</li>
+        <li>Cable numbers in RGC3 count from 1 to 48.</li>
+        <li>Cable numbers in RGA1 count from 49 to 70.</li>
+        <li>Capture cable changes in the <span class=file>current.xlsx</span> and <span class=file>PatchPanel.xlsx</span> files.</li>
+        <li>Writing date: {datetime.date.today().strftime("%B %d, %Y")}</li>
+      </ul>
+    </fieldset>'''
+            
 
         for sw in self.switch_data.keys():
 
             ## h1 for this switch + grid wrapper div
-            page = page + f'\n\n    <h1>{sw}</h1>\n    <h2>{datetime.date.today().strftime("%B %d, %Y")}</h2>\n      <div class="wrapper">\n'
+            page = page + f'''
+
+    <p>
+      &nbsp;
+    </p>
+
+    <fieldset class="container">
+       <legend class="insetlabel">{sw}</legend>
+         <p>
+           &nbsp;
+         </p>
+
+         <div class="wrapper">\n'''
 
             ## generate a div for the table explaining each port
             for i,this in enumerate(self.switch_data[sw]):
@@ -155,7 +185,8 @@ class Ports():
                     #print(text, '\n')
                 page = page + text
             ## close the wrapper div
-            page = page  + '      </div>'
+            page = page  + '''      </div>
+    </fieldset>'''
 
         ##########
         # footer #
@@ -180,7 +211,8 @@ class Ports():
 
     def boxify(self, word):
         '''Convert a word to be spelled by unicode points in the Enclosed
-        Alphanumeric Supplement section.  "Negative Squared Latin Capital Letter X"
+        Alphanumeric Supplement section.
+        e.g. "Negative Squared Latin Capital Letter X"
         See https://unicode-table.com/en/#1F173'''
         boxedword = ''
         for letter in word:
@@ -189,7 +221,7 @@ class Ports():
         return(boxedword)
     
     def oneport(self, this, sw):
-        '''Generate a table that will will one div of the output html file.
+        '''Generate a table that will write one div of the output html file.
         This table contains the data from a single port.  The div looks
         something like this:
 
@@ -208,9 +240,9 @@ class Ports():
         form = '''
           <table>
             <tr>
-              <td rowspan= 4><span class="port">{portn}</span></td>
+              <td rowspan=3 style="vertical-align: top;"><span class="port">{portn}</span></td>
               <td><span class="minor">VLAN:</span></td>
-              <td><span class="vlan">{vlan} {role}</span></td>
+              <td><span class="vlan">{vlan_role}</span></td>
             </tr>
             <tr>
               <td><span class="minor">Tag:</span></td>
@@ -220,7 +252,6 @@ class Ports():
               <td><span class="minor">Speed:</span></td>
               <td><span class="minor">{speed}</span></td>
             </tr>
-            <tr><td></td></tr>
             <tr>
               <td colspan=3 align=center><span class="major">{ip}</span></td>
             </tr>
@@ -246,7 +277,7 @@ class Ports():
             role = ''
         else:
             n = this['VLAN'] % 10
-            role = f' / {self.port_roles[n]}'
+            role = self.port_roles[n]
 
         this_ip = this['IP address']
         if this['IP address'].lower() == 'no ip':
@@ -274,8 +305,9 @@ class Ports():
         return(form.format(duplex = this['Duplex'],
                            speed  = this['Speed'],
                            tag    = this['Tag'],
-                           vlan   = this['VLAN'],
-                           role   = role,
+                           vlan_role = f'{this["VLAN"]}/{role}',
+                           #vlan   = this['VLAN'],
+                           #role   = role,
                            portn  = this['Port number'],
                            ip     = this_ip,
                            name   = this_name,

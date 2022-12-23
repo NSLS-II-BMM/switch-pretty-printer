@@ -4,11 +4,11 @@ body {
 
 .box {
     background-color: #8a8;
-    color: #fff;
+    color: #000;
     border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
-    width: 210px;
+    padding: 10px;
+    font-size: 100%;
+    width: 230px;
 }
 
 .box:nth-child(even) {
@@ -52,14 +52,18 @@ table {
 .vendor {
     font-size: 13px;
     color: #555;
+    line-height: 1.0;
+    display: block;
 }
 .notes {
     font-size: 13px;
-    color: #006;
+    color: #600;
+    line-height: 1.0;
+    display: block;
 }
 .patchpanel {
     font-size: 13px;
-    color: #006;
+    color: #600;
 }
 .port {
     color: #600;
@@ -71,4 +75,26 @@ table {
     font-weight: bold;
     font-family: sans-serif;
     color: #600;
+}
+.file {
+    font-family: monospace;
+}
+.container {
+    border: 4px solid #8a8;
+    border-radius: 15px;
+    position: relative;
+    font-size: 20px;
+}
+
+.insetlabel {
+    font-size: 40px;
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    height: 50px;
+    width: 600px;
+    background-color: #cca;
+    border: 4px solid #8a8;
+    border-radius: 15px;
+    text-align: center;
 }
