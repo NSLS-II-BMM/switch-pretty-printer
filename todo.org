@@ -1,0 +1,10 @@
+* switch pretty printer to do list
+
++ figure out how disp1 and disp2 are routed
+
++ figure out how ws3 is routed
+
++ figure out how srv1 and its host are routed
+
++ is ws4 the windows machine?  or is that ws6?  maybe they share a
+  cable?
